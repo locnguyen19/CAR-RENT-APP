@@ -57,6 +57,7 @@ const CarDetails = () => {
                     ></i>{" "}
                     {singleCarItem.model}
                   </span>
+                  
 
                   <span className=" d-flex align-items-center gap-1 section__description">
                     <i

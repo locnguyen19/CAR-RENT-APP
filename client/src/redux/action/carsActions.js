@@ -1,6 +1,13 @@
 import { message } from 'antd';
 import axios from 'axios';
 
+
+
+
+
+
+
+// GET ALL AVAIBLE CARS FROM THE DATABASE
 export const getAllCars=()=>async dispatch=>{
 
     dispatch({type: 'LOADING' , payload:true})
@@ -16,6 +23,8 @@ export const getAllCars=()=>async dispatch=>{
 
 }
 
+
+// ADD A NEW CAR TO THE DATABASE
 export const addCar=(reqObj)=>async dispatch=>{
 
     dispatch({type: 'LOADING' , payload:true})
@@ -24,7 +33,7 @@ export const addCar=(reqObj)=>async dispatch=>{
          await axios.post('/api/cars/addcar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
-         message.success('New car added successfully')
+         message.success('A new car was added successfully')
          setTimeout(() => {
             window.location.href='/'
          }, 500);
@@ -36,6 +45,10 @@ export const addCar=(reqObj)=>async dispatch=>{
 
 }
 
+
+
+
+//EDIT AN AVAIBLE CAR FROM THE DATABASE
 export const editCar=(reqObj)=>async dispatch=>{
 
     dispatch({type: 'LOADING' , payload:true})
@@ -56,6 +69,9 @@ export const editCar=(reqObj)=>async dispatch=>{
 
 }
 
+
+
+// DELETE AN AVAIBLE CAR FROM THE DATABASE
 export const deleteCar=(reqObj)=>async dispatch=>{
 
     dispatch({type: 'LOADING' , payload:true})

@@ -24,6 +24,7 @@ const CarItem = (props) => {
             <span className=" d-flex align-items-center gap-1">
               <i class="ri-car-line"></i> Basic model
             </span>
+            
             <span className=" d-flex align-items-center gap-1">
               <i class="ri-settings-2-line"></i> Automatic
             </span>

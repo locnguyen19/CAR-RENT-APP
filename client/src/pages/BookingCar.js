@@ -50,6 +50,7 @@ function BookingCar({ match }) {
   console.log(totalHours)
   useEffect(() => {
     setTotalAmount(totalHours * car.rentPerHour);
+    // if an user require to hire a driver, there will be an extra fee which is 30 euro per time
     if (driver) {
       setTotalAmount(totalAmount + 30 * totalHours);
     }

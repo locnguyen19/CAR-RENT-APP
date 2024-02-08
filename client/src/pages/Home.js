@@ -4,9 +4,10 @@ import DefaultLayout from '../components/DefaultLayout'
 import { getAllCars } from '../redux/action/carsActions'
 import { Col, Row, Divider, DatePicker, Checkbox } from 'antd'
 import { Link } from 'react-router-dom'
-import HeroSlider from '../components/HeroSliders/HeroSlider'
+import Hero from '../components/HeroSliders/Hero'
 import BecomeDriverSection from '../components/Driver/BecomeDriverSection'
 import CarItem from '../components/CarItem/CarItem'
+import AboutSection from '../components/AboutSection'
 // import { Container, Row, Col } from "reactstrap";
 
 function Home() {
@@ -28,7 +29,11 @@ function Home() {
 
   return (
     <DefaultLayout>
-      <HeroSlider></HeroSlider>
+      <section className="p-0 ">
+        <Hero></Hero>
+      </section>
+      <AboutSection aboutClass="aboutPage"  ></AboutSection>
+
       {/* <section className="p-0 hero__slider-section">
         <HeroSlider />
 
@@ -46,7 +51,9 @@ function Home() {
           </Container>
         </div>
       </section> */}
+     
       <Row >
+
 
         {/* {totalCars.map(car => {
                     return <Col lg={5} sm={24} xs={24}>
@@ -70,7 +77,7 @@ function Home() {
 
         {totalCars.map(car => {
           return <>
-            <CarItem  item={car} key={car._id}  ></CarItem>
+            <CarItem item={car} key={car._id}  ></CarItem>
           </>
         })}
 
